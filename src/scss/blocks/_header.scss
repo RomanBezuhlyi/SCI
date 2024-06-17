@@ -1,0 +1,110 @@
+.header {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  @include flex(row, space-between, center);
+  @media (max-width: 991px) {
+    padding-top: 17px;
+    padding-bottom: 10px;
+  }
+  &__logo {
+    width: 145px;
+    height: 92.47px;
+    @media (max-width: 991px) {
+      width: 61px;
+      height: 38.9px;
+    }
+    &.mobile {
+      display: none;
+      @media (max-width: 991px) {
+        @include flex(row, center, center);
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 75px;
+        height: 47.83px;
+      }
+    }
+  }
+  &__navigation {
+    @include flex(row, space-between, center);
+    @media (max-width: 991px) {
+      position: absolute;
+      z-index: 10;
+      left: 0;
+      top: -500px;
+      width: 100%;
+      height: auto;
+      @include flex(column, center, center);
+      background-color: $bg;
+      padding: 112px 44px 34px 80px;
+      @include transition;
+    }
+  }
+  &__nav {
+    @include flex(row, space-between, center);
+    gap: 50px;
+    margin-right: 48px;
+    @media (max-width: 991px) {
+      @include flex(column, center, flex-start);
+      gap: 30px;
+      margin-right: 0;
+      margin-bottom: 30px;
+      width: 200px;
+    }
+    a {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: 1%;
+      color: $text;
+      &:hover {
+        color: #124b90;
+      }
+    }
+    a.flag {
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+  }
+  &__phone {
+    @include flex(row, flex-start, center);
+    gap: 12px;
+    color: rgb(72, 98, 132);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 1%;
+    @media (max-width: 991px) {
+      width: 200px;
+      margin-left: -75px;
+    }
+  }
+  &__phone-mobile {
+    display: none;
+    @media (max-width: 991px) {
+      @include flex(row, flex-start, center);
+      gap: 5px;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 1%;
+    }
+  }
+  &__burger {
+    display: none;
+    @media (max-width: 991px) {
+      @include flex(row, center, center);
+    }
+  }
+  &__close {
+    display: none;
+    @media (max-width: 991px) {
+      @include flex(row, center, center);
+      position: absolute;
+      top: 25px;
+      right: 20px;
+    }
+  }
+}
