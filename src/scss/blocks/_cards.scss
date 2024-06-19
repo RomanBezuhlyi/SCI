@@ -37,9 +37,6 @@
     background: $bg;
     @media (max-width: 991px) {
       width: 48%;
-    }
-    @media (max-width: 768px) {
-      width: 48%;
       height: 98px;
       padding: 14px 5px 12px 5px;
     }
@@ -63,7 +60,7 @@
       letter-spacing: 1%;
       text-align: center;
       text-transform: uppercase;
-      @media (max-width: 768px) {
+      @media (max-width: 991px) {
         font-size: 10px;
         line-height: 14px;
       }

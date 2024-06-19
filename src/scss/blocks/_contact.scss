@@ -1,0 +1,123 @@
+.contact-wrap {
+  background-color: $bg;
+}
+.contact-wrap > .container {
+  @media (max-width: 991px) {
+    padding: 0;
+  }
+}
+.contact {
+  @include flex(row, flex-start, center);
+  gap: 70px;
+  border-bottom: 1px solid $blue;
+  @media (max-width: 991px) {
+    @include flex(column, center, center);
+    gap: 10px;
+    padding-bottom: 24px;
+  }
+  &__img {
+    position: relative;
+    width: 50%;
+    height: 446px;
+    @media (max-width: 991px) {
+      width: 100%;
+      height: 250px;
+    }
+    &-bg {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      @media (max-width: 991px) {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-logo {
+      position: absolute;
+      right: 39px;
+      bottom: 35px;
+      width: 145px;
+      height: 92.47px;
+      @media (max-width: 991px) {
+        right: 23px;
+        bottom: 20px;
+        width: 80.95px;
+        height: 51.63px;
+      }
+    }
+  }
+  &__info {
+    h2 {
+      color: $blue;
+      font-family: $font-primary;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 76px;
+      letter-spacing: 0.5px;
+      text-align: left;
+      margin-bottom: 43px;
+      @media (max-width: 991px) {
+        font-size: 20px;
+        line-height: 20px;
+        text-align: center;
+        margin-bottom: 24px;
+      }
+    }
+  }
+  &__list {
+    @include flex(column, flex-start, flex-start);
+    gap: 24px;
+    @media (max-width: 991px) {
+      gap: 16px;
+    }
+    &-item {
+      @include flex(row, flex-start, center);
+      gap: 53px;
+      @media (max-width: 991px) {
+        gap: 36px;
+      }
+      icon {
+        @media (max-width: 991px) {
+          width: 15%;
+        }
+      }
+      &,
+      a {
+        font-family: $font-secondary;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0.5px;
+        @media (max-width: 991px) {
+          color: rgb(54, 55, 59);
+          font-size: 15px;
+        }
+      }
+      .numbers {
+        @include flex(column, flex-start, flex-start);
+        gap: 15px;
+        @media (max-width: 991px) {
+          gap: 10px;
+        }
+        &__item {
+          @include flex(row, flex-start, center);
+          gap: 20px;
+          @media (max-width: 991px) {
+            gap: 15px;
+          }
+          img {
+            @media (max-width: 991px) {
+              width: 15%;
+            }
+          }
+        }
+      }
+      &:last-child {
+        margin-top: 30px;
+        @media (max-width: 991px) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

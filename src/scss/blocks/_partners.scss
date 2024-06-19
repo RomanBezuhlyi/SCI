@@ -1,0 +1,43 @@
+.partners-wrap {
+  background-color: $bg;
+  padding: 46px 0;
+  @media (max-width: 991px) {
+    padding: 10px 0 12px 0;
+  }
+}
+.partners {
+  h2 {
+    color: $blue;
+    font-family: $font-primary;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 4%;
+    text-align: center;
+    margin-bottom: 32px;
+    @media (max-width: 991px) {
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  &__list {
+    width: 100%;
+    @include flex(row, center, center);
+    gap: 43px;
+    @media (max-width: 991px) {
+      flex-wrap: wrap;
+      column-gap: 25px;
+      row-gap: 13px;
+    }
+  }
+  &__list-item {
+    @media (max-width: 991px) {
+      @include flex(row, center, center);
+      width: 25%;
+      img {
+        max-height: 80px;
+      }
+    }
+  }
+}
